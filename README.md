@@ -224,7 +224,7 @@ Föreslå kategorier och taggar med hjälp av AI-modeller för ett recept när d
 
 ### Applikationsramverk
 
-Applikationen ska byggas med Next.js-ramverket.
+Applikationen ska byggas med Next.js-ramverket och TypeScript.
 
 ### Infrastruktur
 
@@ -244,3 +244,41 @@ All data ska sparas i Microsoft Azure:
 
 - Azure Table Storage : För JSON-data som beskriver själva recepten.
 - Azure Blob Storage : För alla bilder 
+
+## Utvecklingsmiljö
+
+### IDE
+
+Jag använder primärt VS Code som utvecklingsverktyg.
+
+Vid utveckling kommer jag att använda Claude Code som ett tillägg (extension) till VS Code och den mesta utvecklingen kommer att ske via Claude Code´s CLI men jag kommer även att läsa och redigera kod manuellt via VS Code.
+
+#### Tillägg i VS Code
+
+Följande tillägg skulle kunna användas i VS Code:
+
+- Claude Code for VS Code (anthropic.claude-code)
+- EditorConfig (EditorConfig.EditorConfig)
+- ESLint (dbaeumer.vscode-eslint)
+- Playwright Test for VSCode (ms-playwright.playwright)
+- Prettier - Code formatter (esbenp.prettier-vscode)
+- Stylelint (stylelint.vscode-stylelint)
+
+#### MCP
+
+Följande MCP:er skulle kunna användas i VS Code:
+
+- Context7
+- GitHub
+- Playwright
+- Azure MCP Server
+- Azure DevOps
+- Azure AI Foundry
+
+### Datalagring i utvecklingsmiljön
+
+Vid utveckling lokalt i VS Code så ska INGEN DATA SPARAS I AZURE utan all data ska sparas i det lokala filsystemet.
+
+Ersätt Azure Table Storage med filer i katalogen "data/azure-table-storage".
+
+Ersätt Azure Blob Storage med filer i katalogen "data/azure-blog-storage".
