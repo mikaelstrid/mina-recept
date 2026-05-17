@@ -1,17 +1,19 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git *)",
-      "Bash(cp -r /tmp/mina-recept-init/src .)",
-      "Bash(cp -r /tmp/mina-recept-init/public .)",
-      "Bash(cp /tmp/mina-recept-init/next.config.ts /tmp/mina-recept-init/tsconfig.json /tmp/mina-recept-init/postcss.config.mjs /tmp/mina-recept-init/eslint.config.mjs /tmp/mina-recept-init/next-env.d.ts /tmp/mina-recept-init/AGENTS.md .)",
-      "Bash(cp /tmp/mina-recept-init/package-lock.json .)",
-      "Bash(npm install *)",
-      "Bash(npx shadcn@latest *)",
-      "Bash(mkdir -p src/app/api/images/\\\\[filename\\\\])",
-      "Bash(mkdir -p \"src/app/api/images/[filename]\")",
       "Bash(npx tsc *)",
-      "Bash(npm test *)"
+      "Bash(npm test *)",
+      "mcp__github__list_issues",
+      "Bash(Get-ChildItem -Path \"C:\\\\source\\\\personal\\\\mina-recept\" -Recurse -Depth 2)",
+      "Bash(Select-Object FullName)",
+      "Bash(Head -30)",
+      "Bash(gh label *)",
+      "Bash(gh auth *)",
+      "Bash(gh repo *)",
+      "Bash(gh issue *)",
+      "Skill(playwright-cli)",
+      "Bash(playwright-cli screenshot *)",
+      "Bash(playwright-cli close *)"
     ]
   }
 }

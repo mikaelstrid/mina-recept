@@ -11,7 +11,7 @@ export function StepList({ control }: { control: Control<CreateRecipeFormData> }
     <div className="space-y-3">
       {fields.map((field, index) => (
         <div key={field.id} className="flex gap-2">
-          <span className="flex h-9 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground mt-0.5">
+          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground mt-0.5">
             {index + 1}
           </span>
           <textarea

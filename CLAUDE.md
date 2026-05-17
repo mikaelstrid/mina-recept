@@ -42,6 +42,8 @@ Storage abstraction must be designed so the same interface works with both the l
 
 Magic link flow: user submits email → server sends link → user clicks link → session created. Admin role is controlled by a comma-separated list of email addresses in a server environment variable (not stored in the database).
 
+**Local development:** Resend is not used. The magic link is printed to the terminal (`stdout`) so the developer can click it directly. No `RESEND_API_KEY` is needed in development.
+
 ### Recipe Input Pipeline
 
 Four entry points feed into a unified recipe creation flow:

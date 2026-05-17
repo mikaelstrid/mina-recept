@@ -34,7 +34,7 @@ Ett recept kan även innehålla följande:
 ### Konto- och användarhantering
 
 - För att använda webbsajten behöver användaren vara inloggad.
-- Användaren loggar in genom att fylla i sin e-postadress. Ett mejl skickas med en länk som användaren klickar på för att logga in.
+- Användaren loggar in genom att fylla i sin e-postadress. Ett mejl skickas med en länk som användaren klickar på för att logga in. (Under lokal utveckling skickas inget mejl — länken visas i terminalen istället.)
 - Användaren skapar sitt konto genom att ange sin e-postadress. Ett mejl skickas med en länk som användaren klickar på för att skapa kontot. Användaren fyller i sitt för- och efternamn vid kontoSkapandet.
 - Det ska gå att helt ta bort sitt konto. All information — användardata, kontoinformation och recept — raderas då.
 
