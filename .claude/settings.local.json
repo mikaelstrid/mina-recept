@@ -13,7 +13,9 @@
       "Bash(gh issue *)",
       "Skill(playwright-cli)",
       "Bash(playwright-cli screenshot *)",
-      "Bash(playwright-cli close *)"
+      "Bash(playwright-cli close *)",
+      "Bash(git checkout *)",
+      "Bash(playwright-cli open *)"
     ]
   }
 }
