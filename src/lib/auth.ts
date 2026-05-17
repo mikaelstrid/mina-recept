@@ -125,6 +125,13 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       apiKey: process.env.RESEND_API_KEY,
       from: process.env.RESEND_FROM_ADDRESS ?? 'noreply@example.com',
       sendVerificationRequest: async ({ identifier, url }) => {
+        if (process.env.NODE_ENV === 'development') {
+          console.log(`\n========================================`)
+          console.log(`Inloggningslänk för ${identifier}:`)
+          console.log(url)
+          console.log(`========================================\n`)
+          return
+        }
         const { Resend } = await import('resend')
         const resend = new Resend(process.env.RESEND_API_KEY)
         await resend.emails.send({
