@@ -39,3 +39,6 @@ next-env.d.ts
 /data/azure-blob-storage/images/*
 !/data/azure-table-storage/.gitkeep
 !/data/azure-blob-storage/images/.gitkeep
+
+# playwright
+.playwright-cli
