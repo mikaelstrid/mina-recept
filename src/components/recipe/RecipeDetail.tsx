@@ -21,10 +21,10 @@ export function RecipeDetail({ recipe }: { recipe: Recipe }) {
   }
 
   return (
-    <article className="mx-auto max-w-3xl px-4 py-8 space-y-8">
+    <article className="mx-auto max-w-3xl space-y-8 px-4 py-8">
       {/* Hero image */}
       {recipe.imageUrl && (
-        <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-muted">
+        <div className="bg-muted relative aspect-video w-full overflow-hidden rounded-2xl">
           <Image
             src={recipe.imageUrl}
             alt={recipe.title}
@@ -39,19 +39,19 @@ export function RecipeDetail({ recipe }: { recipe: Recipe }) {
       {/* Header */}
       <div className="space-y-3">
         <div className="flex items-start justify-between gap-4">
-          <h1 className="text-3xl font-bold leading-tight">{recipe.title}</h1>
+          <h1 className="text-3xl leading-tight font-bold">{recipe.title}</h1>
           {(isAuthor || isAdmin) && (
             <div className="flex shrink-0 gap-2">
               <Link
                 href={`/recipes/${recipe.urlSlug}/edit`}
-                className="flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm transition-colors hover:bg-muted"
+                className="hover:bg-muted flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm transition-colors"
               >
                 <Pencil className="h-3.5 w-3.5" />
                 Redigera
               </Link>
               <button
                 onClick={handleArchive}
-                className="flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm text-destructive transition-colors hover:bg-destructive/10"
+                className="text-destructive hover:bg-destructive/10 flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm transition-colors"
               >
                 <Archive className="h-3.5 w-3.5" />
                 Arkivera
@@ -69,7 +69,7 @@ export function RecipeDetail({ recipe }: { recipe: Recipe }) {
             <Link
               key={cat.id}
               href={`/categories/${cat.id}`}
-              className="rounded-full bg-accent px-3 py-1 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent/80"
+              className="bg-accent text-accent-foreground hover:bg-accent/80 rounded-full px-3 py-1 text-sm font-medium transition-colors"
             >
               {cat.name}
             </Link>
@@ -78,14 +78,14 @@ export function RecipeDetail({ recipe }: { recipe: Recipe }) {
             <Link
               key={tag.id}
               href={`/tags/${tag.id}`}
-              className="rounded-full border px-2.5 py-0.5 text-xs text-muted-foreground transition-colors hover:bg-muted"
+              className="text-muted-foreground hover:bg-muted inline-flex items-center rounded-full border px-2.5 py-1 text-xs transition-colors"
             >
               {tag.name}
             </Link>
           ))}
         </div>
 
-        <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+        <div className="text-muted-foreground flex flex-wrap items-center gap-4 text-sm">
           {recipe.cookingTimeMinutes && (
             <span className="flex items-center gap-1.5">
               <Clock className="h-4 w-4" />
@@ -119,10 +119,10 @@ export function RecipeDetail({ recipe }: { recipe: Recipe }) {
         <ol className="space-y-4">
           {recipe.steps.map((step) => (
             <li key={step.order} className="flex gap-4">
-              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
+              <span className="bg-primary text-primary-foreground flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold">
                 {step.order}
               </span>
-              <p className="leading-relaxed pt-0.5">{step.description}</p>
+              <p className="pt-0.5 leading-relaxed">{step.description}</p>
             </li>
           ))}
         </ol>
